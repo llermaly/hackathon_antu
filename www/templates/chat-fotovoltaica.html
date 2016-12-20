@@ -1,0 +1,14 @@
+<ion-view view-title="Enegía Fotovoltaica por Ciudad">
+  <ion-content>
+  <p>Asumiendo condiciones promedio establecidas por Enlace Solar...</p>
+  <h3>¿Cuanta potencia se puede generar con un panel de 100W?</h3>
+  <h3>Seleccione ciudad</h3>
+	<select ng-options="ciudad as ciudad.nombre for ciudad in ciudades" ng-model="ciudad" ng-change="update(ciudad)" >
+   <option value=''>- Seleccione Ciudad -</option> 
+  </select>
+   	  <h4>{{titulo}}</h4>
+	<canvas id="base" class="chart-bar"
+	  chart-data="data" chart-labels="labels" height="200" chart-options="options">
+	</canvas> 
+  </ion-content>
+</ion-view>

@@ -1,0 +1,16 @@
+<ion-view view-title="Glosario">
+	<ion-content>
+		<div class="list" ng-repeat="item in glosario" >
+		  <div class="item item-divider">
+		    {{item.texto}}
+		  </div>
+		  <a class="item" ng-click="getDetail(item)">
+		    {{item.respuesta}}
+		  </a>
+		</div>
+	</ion-content>
+</ion-view>
+
+
+
+

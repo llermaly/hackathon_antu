@@ -1,0 +1,35 @@
+<ion-view view-title="Pregunta {{preguntaActualIndex}}/{{cantidad}}">
+<ion-content>
+	  <div class="card">
+		  <div class="item item-divider color-active-positive">
+		    Pregunta
+		  </div>
+		  <div class="item item-text-wrap">
+		    {{preguntaActual.texto}}
+		  </div>
+		</div>
+		<div class="card">
+			<div class="item item-divider">
+		    	Alternativas
+		  	</div>
+		  <div class="item item-text-wrap">
+		            <ion-radio ng-repeat="alternativa in preguntaActual.alternativas"
+                   ng-value="{{alternativa}}"
+                   ng-model="$parent.alternativaElegida">
+          {{ alternativa.texto }}
+        </ion-radio>
+		  </div>
+		</div>
+			  <div class="card">
+		  <div class="item item-divider">
+		    Categoría
+		  </div>
+		  <div class="item item-text-wrap">
+		    {{preguntaActual.categoria}}
+		  </div>
+		</div>
+
+              <button class="button button-full button-energized" ng-click="respuesta(alternativaElegida)">{{botonRespuesta}}</button>
+              <p>correctas : {{correctas}}</p>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,30 @@
+<ion-view view-title="Redes Sociales">
+	<ion-content>
+		<div class="list card" ng-repeat="post in posts" ng-if="tipo == 'Facebook'">
+		  <div class="item item-avatar" >
+		    <img src="img/min_avatar.jpg">
+		    <h2>Ministerio de Energía</h2>
+		    <p>{{post.created_time | date:'MMMM dd, yyyy'}}</p>
+		  </div>
+		  <div class="item item-body">
+		    <img class="full-image" src="{{post.full_picture}}">
+		    <p>
+		    {{post.message}}
+		    </p>
+		  </div>
+		</div>
+		<div class="list card" ng-repeat="post in posts" ng-if="tipo == 'Youtube'">
+		  <div class="item item-avatar" >
+		    <img src="img/cne.png">
+		    <h2>Comisión Nacional de Energía</h2>
+		    <p>{{post.snippet.publishedAt | date:'MMMM dd, yyyy'}}</p>
+		  </div>
+		  <div class="item item-body">
+		     <iframe width="300" height="300" ng-src="{{getIframeSrc(post.snippet.videoId)}}" frameborder="0" allowfullscreen></iframe>
+		    <p>
+		    {{post.snippet.title}}
+		    </p>
+		  </div>
+		</div>
+	</ion-content>
+</ion-view>

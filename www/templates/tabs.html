@@ -1,0 +1,26 @@
+<!--
+Create tabs with an icon and label, using the tabs-positive style.
+Each tab's child <ion-nav-view> directive will have its own
+navigation history that also transitions its views in and out.
+-->
+<ion-tabs class="tabs-icon-top tabs-color-active-positive tabs-energized">
+  <!-- Home Tab -->
+  <ion-tab title="Inicio" icon-off="ion-ios-sunny" icon-on="ion-ios-sunny" href="#/tab/dash">
+    <ion-nav-view name="tab-dash"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Nutrientes Tab -->
+  <ion-tab title="Nutrientes" icon-off="ion-leaf" icon-on="ion-leaf" href="#/tab/chats">
+    <ion-nav-view name="tab-chats"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Fotosintesis Tab -->
+  <ion-tab title="Fotosintesis" icon-off="ion-eye" icon-on="ion-eye" href="#/tab/fotosintesis">
+    <ion-nav-view name="tab-fotosintesis"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Semilla Tab -->
+  <ion-tab title="Semilla" icon-off="ion-waterdrop" icon-on="ion-waterdrop" href="#/tab/semilla">
+    <ion-nav-view name="tab-semilla"></ion-nav-view>
+  </ion-tab>
+</ion-tabs>

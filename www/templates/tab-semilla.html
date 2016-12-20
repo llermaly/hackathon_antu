@@ -1,0 +1,12 @@
+<ion-view view-title="Semilla">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" type="item-text-wrap" ng-repeat="item in entidades" ng-click="getDetail(item)">
+        <img ng-src="img/{{item.img}}">
+        <h2>{{item.nombre}}</h2>
+        <p>{{item.tipo}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
